@@ -1,0 +1,54 @@
+:host-context(.web-app) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 15px;
+  width: 200px;
+  color: #333333;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  .product-image {
+    width: 75px;
+    height: 75px;
+    border-radius: 50% 50%;
+    border: 1px solid #333333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-price {
+    flex: 50%;
+    text-align: right;
+    font-size: 25px;
+  }
+
+  .product-name {
+    margin-bottom: 15px;
+    flex: 100%;
+  }
+}
+:host-context(.web-admin) {
+  flex: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #333333;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  &:hover {
+    background-color: #f1f8fa;
+  }
+
+  .product-image {
+    display: none;
+  }
+}

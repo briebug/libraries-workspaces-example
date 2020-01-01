@@ -1,0 +1,24 @@
+:host, * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  .back-button {
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+

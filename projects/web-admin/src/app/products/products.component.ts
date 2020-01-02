@@ -7,7 +7,7 @@ import {Product} from '../../../../products/src/lib/product';
   selector: 'app-products',
   template: `
       <h3>Products</h3>
-      <lib-products (productClicked)="handleProductClicked($event)"></lib-products>
+      <lib-product-list (productClicked)="handleProductClicked($event)"></lib-product-list>
   `,
   styleUrls: ['./products.component.scss']
 })

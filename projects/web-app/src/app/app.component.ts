@@ -27,7 +27,7 @@ import {Product} from '../../../products/src/lib/product';
               <span>{{cartAmount | currency:'USD':'symbol':'.0'}}</span>
           </div>
       </div>
-      <lib-products (productClicked)="handleProductClicked($event)"></lib-products>
+      <lib-product-list (productClicked)="handleProductClicked($event)"></lib-product-list>
   `,
   styleUrls: ['./app.component.scss']
 })

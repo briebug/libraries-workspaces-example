@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {ProductsModule} from '../../../products/src/lib/products.module';
 import {ProductsComponent} from './products/products.component';
 
-const routes = [
+const ROUTES = [
   {
     path: '',
     redirectTo: 'products',
@@ -26,7 +26,7 @@ const routes = [
   imports: [
     BrowserModule,
     ProductsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

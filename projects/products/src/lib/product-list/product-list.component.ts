@@ -1,25 +1,25 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {ProductsService} from './products.service';
+import {Product} from '../product';
 import {Observable} from 'rxjs';
-import {Product} from './product';
+import {ProductsService} from '../products.service';
 
 @Component({
-  selector: 'lib-products',
+  selector: 'lib-product-list',
   template: `
-      <div class="products-list">
+      <div class="product-list">
           <lib-product *ngFor="let product of products$ | async" [product]="product" (click)="productClicked.emit(product)"></lib-product>
       </div>
   `,
   styles: [`
-    .products-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 900px;
-    }
+      .product-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          max-width: 900px;
+      }
   `]
 })
-export class ProductsComponent implements OnInit {
+export class ProductListComponent implements OnInit {
   @Output() productClicked = new EventEmitter<Product>();
   products$: Observable<Product[]>;
 

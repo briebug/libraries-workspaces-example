@@ -26,9 +26,9 @@ export class ManageProductComponent implements OnInit {
       price: ''
     });
 
-    this.product$ = this.route.paramMap.pipe(switchMap(paramMap => {
-      return this.productsService.getProductById(+paramMap.get('id'));
-    }));
+    this.product$ = this.route.paramMap.pipe(switchMap(paramMap =>
+      this.productsService.getProductById(+paramMap.get('id')))
+    );
   }
 
   saveChanges(productToUpdate: Product) {

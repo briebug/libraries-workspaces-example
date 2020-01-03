@@ -6,12 +6,10 @@ import {ProductsService} from '../products.service';
 @Component({
   selector: 'lib-product-list',
   template: `
-      <div class="product-list">
-          <lib-product *ngFor="let product of products$ | async" [product]="product" (click)="productClicked.emit(product)"></lib-product>
-      </div>
+      <lib-product *ngFor="let product of products$ | async" [product]="product" (click)="productClicked.emit(product)"></lib-product>
   `,
   styles: [`
-      .product-list {
+      :host {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
